@@ -13,9 +13,9 @@ pub fn plotter_coverages(outdir: &String,chrom: String,raw_coverages1: &HashMap<
     root.fill(&WHITE)?;
     let mut chart = ChartBuilder::on(&root)
         .caption(format!("Bamslim Depth: {}",chrom), ("Arial", 50).into_font())
-        .margin(5)
-        .x_label_area_size(30)
-        .y_label_area_size(30)
+        .margin(15)
+        .x_label_area_size(50)
+        .y_label_area_size(50)
         .build_cartesian_2d(min_key..max_key, 0..(1.1*max_value as f32) as i32)?;
 
     chart.configure_mesh().draw()?;
